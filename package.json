@@ -1,0 +1,32 @@
+{
+  "name": "rust-extension-akin-destinations",
+  "version": "0.1.0",
+  "bin": {
+    "rust-extension-akin-destinations": "bin/rust-extension-akin-destinations.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "jest",
+    "cdk": "cdk",
+    "deploy": "npm run cdk deploy -- --require-approval never --method direct --asset-parallelism --hotswap-fallback",
+    "bootstrap": "npm run cdk bootstrap -- --qualifier rext --toolkit-stack-name RustExtensionBootstrap"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "8.10.111",
+    "@types/node": "18.13.0",
+    "aws-cdk": "2.65.0",
+    "cargo-lambda-cdk": "0.0.6",
+    "esbuild": "0.17.10",
+    "ts-node": "^10.9.1",
+    "tsx": "3.12.3",
+    "typescript": "~4.9.5",
+    "aws-cdk-lib": "2.65.0",
+    "constructs": "^10.0.0"
+  },
+  "dependencies": {
+    "@expo/results": "1.0.0",
+    "got": "12.5.3",
+    "source-map-support": "^0.5.21"
+  }
+}
